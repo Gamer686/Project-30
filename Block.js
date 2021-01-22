@@ -9,12 +9,18 @@ class Block{
         this.body=Bodies.rectangle(x,y,w,h,options);
         this.w = w;
         this.h =h;
-        this.visibility=225
+        this.visiblity = 225
         World.add(world,this.body);
     }
     display(){
-        if(this.body.speed<3){
+        if(this.body.speed < 3){
+        }
+        else{
+            World.remove(world, this.body);
+        }
         push()
+        this.visiblity = this.visiblity -5;
+        tint(255,this.visiblity);
         var angle = this.body.angle;
         var pos = this.body.position;
       translate(pos.x,pos.y);
@@ -24,6 +30,5 @@ class Block{
         fill("pink")
         rect(0,0,this.w,this.h);
         pop();
-    }
     }
 }

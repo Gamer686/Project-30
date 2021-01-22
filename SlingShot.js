@@ -22,7 +22,7 @@ class SlingShot{
             var pointB = this.pointB;
 
             strokeWeight(4);
-            stroke("blue")
+            stroke("orange")
             fill("red");
             line(pointA.x,pointA.y,pointB.x,pointB.y);
         }
