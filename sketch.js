@@ -138,7 +138,7 @@ function draw(){
 
 }
 function mouseDragged(){
-    Matter.Body.setPosition(this.polygon,{x:mouseX,y:mouseY});
+    Matter.Body.setPosition(polygon,{x:mouseX,y:mouseY});
 }
 
 function mouseReleased(){
@@ -147,6 +147,6 @@ function mouseReleased(){
 
 function keyPressed(){
     if(keyCode===32){
-    slingshot.attach(this.polygon);
+    slingShot.attach(polygon);
 }
 }
