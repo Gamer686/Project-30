@@ -16,18 +16,20 @@ class Block{
         if(this.body.speed < 3){
             var angle = this.body.angle;
             var pos = this.body.position;
-          translate(pos.x,pos.y);
+            push();
+          translate( pos.x, pos.y);
           angleMode(RADIANS)
             rotate(angle)
             rectMode(CENTER)
             fill("pink")
             rect(0,0,this.w,this.h);
+            pop();
         }
         else{
             World.remove(world,this.body);
         }
-        push()
-        this.visiblity = this.visiblity - 0.5;
+        push();
+        this.visiblity = this.visiblity - 5;
         tint(255,this.visiblity);
         
         pop();
