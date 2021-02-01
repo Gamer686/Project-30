@@ -4,7 +4,7 @@ class Block{
            // isStatic:true
            restitution:0.8,
            friction:0.9,
-            density:1.5
+            density:0.00002
         }
         this.body=Bodies.rectangle(x,y,w,h,options);
         this.w = w;
